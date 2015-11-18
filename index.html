@@ -1,0 +1,23 @@
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+
+</head>
+<body ng-app="myMod">
+	<div class="container" ng-controller="myCtrl">
+	<header><h1>{{Heading}}<h1></header>
+<!--<button class= "btn-primary btn-lg" ng-click="addUndecoratedWord()">Words</button>
+<button class= "btn-primary btn-lg" ng-click="addDecoratedWord()"></button>-->
+<button class= "btn-primary btn-lg" ng-click= "talk()">More Words</button>
+<!--<button "btn-primary btn-lg">More words with Decor</button>-->
+<div class="list-of-words">
+	<span ng-repeat="element in wordsOnPage track by $index" class = "ng-class : {{element.decor}}">{{element.word}}</span>
+</div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
