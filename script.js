@@ -7,6 +7,13 @@ angular.module("myMod",[])
 		"Words",
 		"Oops"
 	];
+
+	$scope.randomPhrasess =[
+		"Hello World!",
+		"Random Phrases!",
+		"Worlds Apart!",
+		"One Life to Live!"
+	];
 	
 	$scope.randomClass=[
 	"red ",
@@ -19,7 +26,7 @@ angular.module("myMod",[])
 	$scope.wordsOnPage = [];
 	
 	$scope.talk = function(){
-		var functions = [addUndecoratedWord, addDecoratedWord, addPhraseFromWord];
+		var functions = [addUndecoratedWord, addDecoratedWord, addPhrase];
 		function rando(){
 		return functions[Math.floor(Math.random() * functions.length)]();
 	};
@@ -38,12 +45,15 @@ angular.module("myMod",[])
 		$scope.wordsOnPage.push(newElement);
 
 	}
-	function addPhraseFromWord(){
-		var newElement = {}
-		newElement.phrase = $scope.randomWords[Math.floor(Math.random()+$scope.randomWords.length)];
-		newElement.decor= $scope.randomClass[Math.floor(Math.random() * $scope.randomClass.length)];
+	function addPhrase() {
+		var newElement ={}
+		newElement.word = $scope.randomPhrasess[Math.floor(Math.random()* $scope.randomPhrasess.length)];
+		newElement.decor = $scope.randomClass[Math.floor(Math.random()*$scope.randomClass.length)];
 		$scope.wordsOnPage.push(newElement);
-
 	}
+
+
+
+	
 
 });
