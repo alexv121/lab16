@@ -1,0 +1,29 @@
+button{
+	color: pink;
+	background-color: blue;
+}
+.red{
+	color:red;
+	background-color: red;
+}
+.blue{
+	background-color: blue;
+	color: white;
+}
+.size{
+	font-size: 30px;
+}
+.newfont{
+	font-family: Georgia;
+}
+.underline{
+	text-decoration: underline;
+}
+/*.spin{
+	{
+		webkit-animation: spin 10s infinite;
+	
+}
+@keyframes spin{
+		from{-webkit-transform: rotate (0 DEG);}
+	to{-webkit-transform: rotate (360 DEG);}*/
